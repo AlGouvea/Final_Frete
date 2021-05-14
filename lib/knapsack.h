@@ -40,7 +40,7 @@ void rota(it *lista, mp *mapa){
 
     //variaveis
     int opt, origem, dest, distancia;
-    float van, carro, caminhonete, freteVan, freteCarro, freteCaminhonete;
+    float Caminhonete, Moto, Carro, freteCaminhonete, freteMoto, freteCarro;
 
     //Ler cidades
     printf("Informe o ID da cidade de origem: ");
@@ -62,19 +62,19 @@ void rota(it *lista, mp *mapa){
     }
 
     //Fazer os knapsacks
-    carro = knapsack(lista, 340);
-    caminhonete = knapsack(lista, 580);
-    van = knapsack(lista, 760);
+    Moto = knapsack(lista, 340);
+    Carro = knapsack(lista, 580);
+    Caminhonete = knapsack(lista, 760);
 
     //Calcular frete
-    freteCarro = (((carro/100)*1)*distancia/80);
-    freteCaminhonete = (((caminhonete/100)*2,5)*distancia/110);
-    freteVan = (van/100)*15; 
+    freteMoto = (((Moto/100)*1)*distancia/80);
+    freteCarro = (((Carro/100)*2,5)*distancia/110);
+    freteCaminhonete = (Caminhonete/100)*15; 
 
     //Descontar o frete
-    carro = carro-freteCarro;
-    caminhonete = caminhonete-freteCaminhonete;
-    van = van-freteVan;
+    Moto = Moto-freteMoto;
+    Carro = Carro-freteCarro;
+    Caminhonete = Caminhonete-freteCaminhonete;
 
     //Definir prioridade
     int choice;
@@ -84,34 +84,34 @@ void rota(it *lista, mp *mapa){
     
     switch(choice){
         case 1://Baseado no menor frete
-            if(freteCaminhonete > freteCarro){
-                if(freteVan > freteCarro){
-                    printf("O veiculo com menor frete eh o carro.\nCusto: R$%.2f\n", freteCarro);
+            if(freteCarro > freteMoto){
+                if(freteCaminhonete > freteMoto){
+                    printf("O veiculo com menor frete eh o Moto.\nCusto: R$%.2f\n", freteMoto);
                 }else{
-                    printf("O veiculo com menor frete eh a van.\nCusto: R$%.2f\n", freteVan);
+                    printf("O veiculo com menor frete eh a Caminhonete.\nCusto: R$%.2f\n", freteCaminhonete);
                 }
-            }else if(freteCaminhonete > freteVan){
-                if(freteVan > freteCarro){
-                    printf("O veiculo com menor frete eh o carro.\nCusto: R$%.2f\n", freteCarro);
+            }else if(freteCarro > freteCaminhonete){
+                if(freteCaminhonete > freteMoto){
+                    printf("O veiculo com menor frete eh o Moto.\nCusto: R$%.2f\n", freteMoto);
                 }else{
-                    printf("O veiculo com menor frete eh a van.\nCusto: R$%.2f\n", freteVan);
+                    printf("O veiculo com menor frete eh a Caminhonete.\nCusto: R$%.2f\n", freteCaminhonete);
                 }
             }else{
-                printf("O veiculo com menor frete eh a caminhonete.\nCusto: R$%.2f\n", freteCaminhonete);
+                printf("O veiculo com menor frete eh a Carro.\nCusto: R$%.2f\n", freteCarro);
             }
         break;
 
         case 2://Baseado no maior lucro
-            if(caminhonete < carro){
-                if(van < carro){
-                    printf("O veiculo com maior lucro eh o carro.\nLucro: R$%.2f\n", carro);
+            if(Carro < Moto){
+                if(Caminhonete < Moto){
+                    printf("O veiculo com maior lucro eh o Moto.\nLucro: R$%.2f\n", Moto);
                 }else{
-                    printf("O veiculo com maior lucro eh a van.\nLucro: R$%.2f\n", van);
+                    printf("O veiculo com maior lucro eh a Caminhonete.\nLucro: R$%.2f\n", Caminhonete);
                 }
-            }else if(caminhonete < van){
-                printf("O veiculo com maior lucro eh a van.\nLucro: R$%.2f\n", van);
+            }else if(Carro < Caminhonete){
+                printf("O veiculo com maior lucro eh a Caminhonete.\nLucro: R$%.2f\n", Caminhonete);
             }else{
-                printf("O veiculo com maior lucro eh a caminhonete.\nLucro: R$%.2f\n", caminhonete);
+                printf("O veiculo com maior lucro eh a Carro.\nLucro: R$%.2f\n", Carro);
             }
         break;
 
