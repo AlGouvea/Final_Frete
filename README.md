@@ -13,7 +13,12 @@
 O objetivo desse projeto é encontrar a melhor rota, e o melhor veículo para levar o máximo possível de um determinado conjunto de cargas. Levando em conta paramêtros como custo de cada carga, seu peso, peso limite do veículo e custo do frete de cada veículo.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![Imagem 1](https://github.com/projeto-de-algoritmos/Final_Frete/blob/master/imagens/print1.png)
+![Imagem 2](https://github.com/projeto-de-algoritmos/Final_Frete/blob/master/imagens/print2.png)
+![Imagem 3](https://github.com/projeto-de-algoritmos/Final_Frete/blob/master/imagens/print3.png)
+![Imagem 4](https://github.com/projeto-de-algoritmos/Final_Frete/blob/master/imagens/print4.png)
+![Imagem 5](https://github.com/projeto-de-algoritmos/Final_Frete/blob/master/imagens/print5.png)
+![Imagem 6](https://github.com/projeto-de-algoritmos/Final_Frete/blob/master/imagens/print6.png)
 
 ## Instalação 
 **Linguagem**: C<br>
